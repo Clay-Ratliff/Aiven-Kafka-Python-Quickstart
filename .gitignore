@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Do not commit security related files
+*.pem
+*.cert
+*.key
+
+# Do not store vim sessions
+Session*
