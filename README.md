@@ -1,3 +1,4 @@
+![Navigation-panel](https://user-images.githubusercontent.com/1443943/172065100-ceb9f581-52be-4391-ae6a-dc55c9cf394d.png)
 # Aiven-Kafka-Python-Quickstart
 ## A simple tutorial to get started using Kafka services managed by Aiven 
 <p>
