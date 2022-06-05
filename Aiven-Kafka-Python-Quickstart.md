@@ -17,8 +17,10 @@ You'll also need to set up a total of three services on the Aiven platform, the 
 Once you've created your account we can set up the services.
 
 ## Kafka
-First we'll set up a kafka service. Click on the Service link at the top of the left navigation bar.  From here we want to click on the Create a new service button.
-From here, click on the kafka image to select service, select the cloud provider that you want to host kafka (I choose GCP but it really doesn't matter for our purposes), select the appropriate region, and finally the service plan (I suggest the smallest "Startup" plan). Now just click create and wait for the magic to happen. It will take a few minutes for Aiven to complete the provisioning and configuration.
+First we'll set up a kafka service. Click on the Service link at the top of the left navigation bar.
+![Navigation panel](Navigation-panel.png)
+From here we want to click on the Create a new service button.
+From here, click on the kafka image to select service, select the cloud provider that you want to host kafka (I chose GCP but it really doesn't matter for our purposes), select the appropriate region for your cloud provider, and finally select the service plan (I suggest the smallest "Startup" plan). Now just click create and wait for the magic to happen. It will take a few minutes for Aiven to complete the provisioning and configuration.
 
 ## InfluxDB
 We will be using InfluxDB as the storage place for our Kafka metrics.  The process for setting up InfluxDB is similar to that of setting up a Kafka service but instead of selecting the Kafka service icon you will select the InfluxDB service icon. Select the same cloud provider, cloud provider region, and Startup service plan, then click create.
