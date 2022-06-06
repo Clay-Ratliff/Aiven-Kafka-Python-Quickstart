@@ -5,3 +5,4 @@
 Aiven (pronounced ai-vn) makes it convenient to quickly experiment with many types of datastores.
 Today we're going to be taking a look at how to quickly setup an Aiven account, create a kafka service with observability and monitoring through Graphana, and demonstrate it's use by emulating an IoT device that publishes simple weather data to Kafka.
 </p>
+Please take a look at the Aiven-Kafka-Quickstart.docx or Aiven-Kafka-Quickstart.odt documents for a detailed walkthrough.
