@@ -6,16 +6,17 @@ import sys
 
 from producer import producer
 
-
 def main():
+    # The main function and it's two helper functions simply process the CLI arguments 
+    # and pass them to the producer function.
     parser = argparse.ArgumentParser()
-    parser.add_argument('--service-uri', help="Service URI in the form host:port",
+    parser.add_argument('-uri', '--service-uri', help="Service URI in the form host:port",
                         required=True)
-    parser.add_argument('--ca-path', help="Path to project CA certificate",
+    parser.add_argument('-cap', '--ca-path', help="Path to project CA certificate",
                         required=True)
-    parser.add_argument('--key-path', help="Path to the Kafka Access Key (obtained from Aiven Console)",
+    parser.add_argument('-kp', '--key-path', help="Path to the Kafka Access Key (obtained from Aiven Console)",
                         required=True)
-    parser.add_argument('--cert-path', help="Path to the Kafka Certificate Key (obtained from Aiven Console)",
+    parser.add_argument('-cp', '--cert-path', help="Path to the Kafka Certificate Key (obtained from Aiven Console)",
                         required=True)
     parser.add_argument('-m', '--message-count', type=int, default=1, help="The number of messages to send")
     args = parser.parse_args()
@@ -23,7 +24,6 @@ def main():
 
     kwargs = { k: v for k, v in vars(args).items() }
     producer(**kwargs)
-
 
 def validate_args(args):
     for path_option in ("ca_path", "key_path", "cert_path"):
@@ -35,7 +35,6 @@ def validate_args(args):
 def fail(message):
     print(message, file=sys.stderr)
     exit(1)
-
 
 if __name__ == '__main__':
     main()
